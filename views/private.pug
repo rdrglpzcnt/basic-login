@@ -1,0 +1,12 @@
+extends ./layout.pug
+
+
+block righNavContent
+	form(method="post" action="/logout")
+		button.btn.btn-primary.btn-sm Cerrar sesión
+
+block content
+	div
+		h1 Contenido privado 🔐
+		div.text-center
+			img.top-secret-image(src="/images/toast.png")

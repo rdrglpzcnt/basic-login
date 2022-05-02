@@ -1,0 +1,34 @@
+extends ./layout.pug
+
+block content
+	div
+		h1.mb-2.text-primary Inicia sesión
+
+		//- error messages
+		div
+			each error in errors
+				p.text-danger #{error}
+
+		div.card.shadow.mb-4
+			// login form
+			form.p-4(
+				method="post"
+				action="/login")
+
+				div.mb-2
+					label.form-label(for="email") Correo
+					input.form-control(name="email" type="email" value=old && old.email required)
+
+				div.mb-4
+					label.form-label(for="password") Contraseña
+					input.form-control(name="password" type="password" required)
+
+				div
+					button.btn.btn-primary.w-100 #[i.bi.bi-door-open] Iniciar sesión
+
+
+
+		p.text-muted
+			small email: saulgoodman@gmail.com
+			br
+			small password: bettercallsaul

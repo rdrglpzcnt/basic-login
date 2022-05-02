@@ -1,0 +1,18 @@
+html
+	
+	head
+		title="Inicio"
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet" href="/css/styles.css")
+		
+	body
+		nav.shadow-sm.fixed-top
+			.container
+				a.text-decoration-none(href="/") 🔐
+				block righNavContent
+		
+		main.vh-100.pt-5
+			div.h-100.d-flex.align-items-center.justify-content-center
+				block content
+		
+		script(src="/js/app.js")
